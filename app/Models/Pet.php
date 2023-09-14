@@ -16,4 +16,22 @@ class Pet extends Model
         'photo',
         'gender_id',
     ];
+
+    /**
+     * Relaciones uno a uno
+     */
+    public function race()
+    {
+        return $this->belongsTo(Race::class, 'race_id', 'id');
+    }
+
+    public function Categorie()
+    {
+        return $this->hasOne(Categorie::class);
+    }
+
+    public function Gender()
+    {
+        return $this->hasOne(Gender::class);
+    }
 }

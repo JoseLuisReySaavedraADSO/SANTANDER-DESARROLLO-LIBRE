@@ -12,4 +12,9 @@ class gender extends Model
         'id',
         'name',
     ];
+
+    public function Race()
+    {
+        return $this->hasMany(Race::class);
+    }
 }

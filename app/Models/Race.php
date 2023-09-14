@@ -12,4 +12,9 @@ class Race extends Model
         'id',
         'name',
     ];
+
+    public function pet()
+    {
+        return $this->hasMany(Pet::class);
+    }
 }
