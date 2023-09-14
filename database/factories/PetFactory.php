@@ -19,10 +19,10 @@ class PetFactory extends Factory
         return [
             // 'id' => '',
             'name' => fake()->name(),
-            'race_id' => '1',
-            'categorie_id' => '1',
+            'race_id' => rand(1,5),
+            'categorie_id' => rand(1,5),
             'photo' => fake()->name(),
-            'gender_id' => '1',
+            'gender_id' => rand(1,5),
         ];
     }
 }
