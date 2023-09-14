@@ -257,3 +257,6 @@
     font-weight: 500;
 }
 /* SECCIÓN PET */
+body{
+    display:none;
+}
