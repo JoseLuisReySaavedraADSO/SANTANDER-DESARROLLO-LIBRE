@@ -198,6 +198,10 @@ html {
     border-radius: 30px;
     overflow: hidden;
     width: 140px;
+    height: 280px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
     cursor: pointer;
     /* padding: 10px; */
 }
@@ -254,12 +258,7 @@ html {
 /* SECCIÓN PET */
 
 
-
-
-/* + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + */
-/* Login */
-/* + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + */
-/* main.login */
+/* SECCIÓN DE LOGIN */
 .login__container{
     width: 100%;
     background: rgb(189,235,247);
