@@ -219,6 +219,10 @@ html {
     background-color: #fff;
     position: relative;
     z-index: 100;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .animal__info--extra{
     width: 100%;
