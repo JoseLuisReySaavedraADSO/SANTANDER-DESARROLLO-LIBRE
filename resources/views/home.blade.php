@@ -6,8 +6,19 @@
     <section class="container second__container">
 
         <div class="headerTitle">
-            <a class="headerTitle__link" href="indexInicio.html"><img src="images/chevron-left.svg" alt=""></a>
+            <a class="headerTitle__link" href="{{ url('/') }}"><img src="images/chevron-left.svg" alt=""></a>
             <h1>Buscar</h1>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </div>
         </div>
 
         <div class="barSearch">
