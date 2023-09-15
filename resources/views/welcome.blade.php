@@ -1,16 +1,27 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    @extends('layouts.app')
+    @section('content')
+        <section class="container">
+        
+            <div class="changeBackground">
+                <input class="input" type="radio" id="changeImage">
+                <input class="input" type="radio" id="changeImage">
+            </div>
 
-        <title>Laravel</title>
+            <div class="title">
+                <h1 class="title__main">Tu mejor amigo <span class="title__second">en casa!</span></h1>
+            </div>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    </head>
-    <body class="antialiased">
-        @extends('layouts.app')
-    </body>
-</html>
+            <p class="paragraph">Adoptar la mascota perfecta de más de 700 refugios de animales...</p>
+
+            <div class="picture" id="changeImage">
+                <img class="picture__image" src="{{asset('images/slide1.png')}}" alt="">
+            </div>
+
+            <!-- <div class="picture picture2" id="changeImage">
+                <img class="picture__image" src="images/slide2.png" alt="">
+            </div> -->
+
+            <a class="link" href="{{ route('login') }}"><img src="{{asset('images/chevron-right.svg')}}" alt=""></a>
+
+        </section>
+    @endsection
