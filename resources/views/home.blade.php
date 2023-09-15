@@ -41,7 +41,8 @@
                     <div class="container__cards">
                         <div class="card__animal">
                             <div class="animal__photo">    
-                                <img class="animal__photo" src="images/ivana.png" alt="">
+                                {{-- {{dd($pet->photo)}} --}}
+                                {{-- <img class="animal__photo" src="{{assets($pet->photo)}}" alt=""> --}}
                             </div>
                             <div class="animal__info">
                                 {{-- {{dd($pet)}} --}}

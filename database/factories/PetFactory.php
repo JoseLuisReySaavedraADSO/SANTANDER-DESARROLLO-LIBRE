@@ -21,7 +21,7 @@ class PetFactory extends Factory
             'name' => fake()->name(),
             'race_id' => rand(1,5),
             'categorie_id' => rand(1,5),
-            'photo' => fake()->name(),
+            'photo' => fake()->randomElement(['images-frontEnd/ivana.png', 'images-frontEnd/karsten.png', 'images-frontEnd/reigner.png', 'images-frontEnd/alvan.png']),
             'gender_id' => rand(1,5),
         ];
     }
