@@ -47,10 +47,9 @@ html {
 .picture{
     width: 100%;
     max-width: 300px;
-}
-/* .picture2{
     display: none;
-} */
+}
+
 .picture__image{
     height: 100%;
     width: 100%;
@@ -58,14 +57,17 @@ html {
 .input{
     margin-top: 30px;
 }
-/* .input:checked~.picture{
+
+.picture__none{
     opacity: 0;
     display: none;
 }
-.input:checked~.picture2{
+
+.picture__show{
     opacity: 1;
     display: inline-block;
-} */
+} 
+
 .link{
     position: absolute;
     bottom: 30px;
@@ -260,9 +262,6 @@ html {
     font-weight: 500;
 }
 /* SECCIÓN PET */
-
-
-
 
 
 

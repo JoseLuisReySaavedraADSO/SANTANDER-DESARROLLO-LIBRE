@@ -6,8 +6,8 @@
         <section class="container">
         
             <div class="changeBackground">
-                <input class="input" type="radio" id="changeImage">
-                <input class="input" type="radio" id="changeImage">
+                <input class="input" type="radio" id="showImage1" name="changeImage" checked>
+                <input class="input" type="radio" id="showImage2" name="changeImage">
             </div>
 
             <div class="title">
@@ -16,13 +16,13 @@
 
             <p class="paragraph">Adoptar la mascota perfecta de más de 700 refugios de animales...</p>
 
-            <div class="picture" id="changeImage">
+            <div class="picture picture__show" id="image1">
                 <img class="picture__image" src="{{asset('images-frontEnd/slide1.png')}}" alt="">
             </div>
-
-            <!-- <div class="picture picture2" id="changeImage">
-                <img class="picture__image" src="images/slide2.png" alt="">
-            </div> -->
+            
+            <div class="picture picture__none" id="image2">
+                <img class="picture__image" src="{{asset('images-backEnd/slide2.png')}}" alt="">
+            </div>
 
             <a class="link" href="{{ route('login') }}"><img src="{{asset('images-frontEnd/chevron-right.svg')}}" alt=""></a>
 
