@@ -21,7 +21,7 @@
             </div>
             
             <div class="picture picture__none" id="image2">
-                <img class="picture__image" src="{{asset('images-backEnd/slide2.png')}}" alt="">
+                <img class="picture__image" src="{{asset('images-frontEnd/slide2.png')}}" alt="">
             </div>
 
             <a class="link" href="{{ route('login') }}"><img src="{{asset('images-frontEnd/chevron-right.svg')}}" alt=""></a>
