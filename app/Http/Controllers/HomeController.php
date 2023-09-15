@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $pets = Pet::paginate(4);
+        $pets = Pet::paginate();
         // $pets = Pet::with('race')->get();
         // dd($pets);
         // $petId = 1;
