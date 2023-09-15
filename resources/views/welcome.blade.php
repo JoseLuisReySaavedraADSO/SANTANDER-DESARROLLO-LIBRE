@@ -1,5 +1,8 @@
     @extends('layouts.app')
     @section('content')
+
+    <main class="main__container">
+
         <section class="container">
         
             <div class="changeBackground">
@@ -14,14 +17,17 @@
             <p class="paragraph">Adoptar la mascota perfecta de más de 700 refugios de animales...</p>
 
             <div class="picture" id="changeImage">
-                <img class="picture__image" src="{{asset('images/slide1.png')}}" alt="">
+                <img class="picture__image" src="{{asset('images-frontEnd/slide1.png')}}" alt="">
             </div>
 
             <!-- <div class="picture picture2" id="changeImage">
                 <img class="picture__image" src="images/slide2.png" alt="">
             </div> -->
 
-            <a class="link" href="{{ route('login') }}"><img src="{{asset('images/chevron-right.svg')}}" alt=""></a>
+            <a class="link" href="{{ route('login') }}"><img src="{{asset('images-frontEnd/chevron-right.svg')}}" alt=""></a>
 
         </section>
+
+    </main>
+        
     @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="main">
+<main class="main__container">
 
     <section class="container second__container">
 
