@@ -47,10 +47,8 @@
                     </div>
                     <div class="animal__info">
                         {{-- {{dd($pet)}} --}}
-                        <div>
-                            <h2 class="animal__info--name">{{$pet->name}}</h2>
-                            <p class="animal__info--race">{{$pet->race->name}}</p> 
-                        </div>
+                        <h2 class="animal__info--name">{{$pet->name}}</h2>
+                        <p class="animal__info--race">{{$pet->race->name}}</p>
                         <div class="animal__info--extra">
                             <span>$400</span>
                             <img src="{{asset('images-frontEnd/sm-heart.svg')}}" alt="">
