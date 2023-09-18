@@ -28,7 +28,7 @@
         </div>
 
         <div class="category">
-            <a href="{{ route('home') }}" class="category__animal">
+            <a href="{{ route('home') }}" class="category__animal category__animal--select">
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_dog.svg')}}" alt="">
                 <p class="category__animal--text">Perros</p>
             </a>
