@@ -28,14 +28,14 @@
         </div>
 
         <div class="category">
-            <div class="category__animal">
+            <a href="{{ route('home') }}" class="category__animal">
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_dog.svg')}}" alt="">
                 <p class="category__animal--text">Perros</p>
-            </div>
-            <div class="category__animal">
+            </a>
+            <a href="{{ route('homecats') }}" class="category__animal">
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_cat.svg')}}" alt="">
                 <p class="category__animal--text">Gatos</p>
-            </div>
+            </a>
         </div>
 
         <div class="container__cards">

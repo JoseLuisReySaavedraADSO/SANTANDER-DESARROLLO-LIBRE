@@ -32,7 +32,7 @@
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_dog.svg')}}" alt="">
                 <p class="category__animal--text">Perros</p>
             </a>
-            <a href="#" class="category__animal">
+            <a href="{{ route('homecats') }}" class="category__animal">
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_cat.svg')}}" alt="">
                 <p class="category__animal--text">Gatos</p>
             </a>

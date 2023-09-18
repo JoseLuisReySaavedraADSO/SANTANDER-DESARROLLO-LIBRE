@@ -4,7 +4,7 @@
         <header>
             <h2>Adicionar Mascota</h2>
             <a href="{{ route('dashboard') }}" class="back"></a>
-            <a href="index.html" class="close"></a>
+            <a href="{{ route('home') }}" class="close"></a>
         </header>
         <figure class="photo-preview">
             <img src="imgs/photo-lg-0.svg" alt="">
@@ -21,18 +21,20 @@
                 </select>
             </div>
             <div class="select">
-                <select name="raza">
-                    <option value="">Seleccione Categoría...</option>
-                    <option value="1">Perro</option>
-                    <option value="2">Gato</option>
+                <select name="categoria">
+                    <option disabled selected>Seleccionar categoria...</option>
+                    @foreach ($categories as $categorie)
+                        <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
+                    @endforeach
                 </select>
             </div>
             <button type="button" class="upload">Subir Foto</button>
             <div class="select">
-                <select name="raza">
-                    <option value="">Seleccione Genero...</option>
-                    <option value="1">Hembra</option>
-                    <option value="2">Macho</option>
+                <select name="genero">
+                    <option disabled selected>Seleccionar genero...</option>
+                    @foreach ($genders as $gender)
+                        <option value="{{ $gender->id }}">{{ $gender->name }}</option>
+                    @endforeach
                 </select>
             </div>
             <button class="save">Guardar</button>
