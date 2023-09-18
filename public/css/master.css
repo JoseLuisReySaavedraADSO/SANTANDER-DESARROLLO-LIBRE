@@ -1,15 +1,15 @@
 /* fonts */
 @font-face {
     font-family: Montserrat-Bold;
-    src: url(../fonts/Montserrat-Bold.ttf);
+    src: url(/fonts/Montserrat-Bold.ttf);
 }
 @font-face {
     font-family: Montserrat-Regular;
-    src: url(../fonts/Montserrat-Regular.ttf);
+    src: url(/fonts/Montserrat-Regular.ttf);
 }
 @font-face {
     font-family: Montserrat-Medium;
-    src: url(../fonts/Montserrat-Medium.ttf);
+    src: url(/fonts/Montserrat-Medium.ttf);
 }
 /* html */
 html {
@@ -57,16 +57,16 @@ main.login form input:focus {
     opacity: 0.8;
 }
 main.login form input:first-of-type {
-    top: 575px;
+    top: 560px;
 }
 main.login form input:last-of-type {
-    top: 646px;
+    top: 625px;
 }
 main.login form button {
     color: #fff;
     background: #2C4674;
     font-size: 16px;
-    top: 717px;
+    top: 690px;
     transition: transform 0.2s ease-in;
 }
 main.login form button:hover {
@@ -373,8 +373,10 @@ main.show div article p {
 }
 
 .form__inputContainer{
-    width: 90%;
+    position: absolute;
+    width: 100%;
     text-align: center;
+    top: 740px;
 }
 
 .form__inputContainer--text{
