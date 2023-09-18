@@ -10,6 +10,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- CSS -->
+    
+    {{-- <link rel="stylesheet" href="{{asset('css/css.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('css/master.css')}}">
 
     <!-- Fonts -->
