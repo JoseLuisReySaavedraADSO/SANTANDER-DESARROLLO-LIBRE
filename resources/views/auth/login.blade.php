@@ -29,7 +29,7 @@
             </button>
 
             <div class="form__inputContainer">
-                <p class="form__inputContainer--text">¿Aún no posee una cuenta? <a class="form__inputContainer--link" href="{{route('register')}}">Regístrate</a> </p>
+                <p class="form__inputContainer--text">¿Aún no posee una cuenta? <a class="form__inputContainer--link" href="{{route('dashboard')}}">Regístrate</a> </p>
             </div>
             
             {{-- <button type="submit">Ingresar</button>
