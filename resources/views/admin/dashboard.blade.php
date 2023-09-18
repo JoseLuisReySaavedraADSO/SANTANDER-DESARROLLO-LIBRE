@@ -1,10 +1,11 @@
 @extends('layouts.back')
+@section('content')
 <main class="dashboard">
     <header>
         <h2>Administrar Mascotas</h2>
-        <a href="index.html" class="close"></a>
+        <a href="{{ route('home') }}" class="close"></a>
     </header>
-    <a href="add.html" class="add"></a>
+        <a href="{{ route('add') }}" class="add"></a>
     <table>
         @php
         $count = 1;
@@ -32,5 +33,5 @@
         @endforeach
     </table>
 </main>
-@section('content')
+
 @endsection

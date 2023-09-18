@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
+use App\Models\Gender;
+use App\Models\Race;
 use App\Models\Pet;
 use Illuminate\Http\Request;
 
@@ -32,7 +35,11 @@ class PetController extends Controller
      */
     public function create()
     {
-        //
+        $races = Race::all(); // Obtén todos los registros necesarios!!
+        $genders = Gender::all();
+        $categories = Categorie::all();
+        // dd($genders);
+        return view('admin/add', compact('races', 'genders', 'categories'));
     }
 
     /**
@@ -48,7 +55,6 @@ class PetController extends Controller
      */
     public function show(string $id)
     {
-        //
     }
 
     /**

@@ -21,4 +21,5 @@ Route::get('/', function () {
 Auth::routes(); 
 
 Route::get('/dashboard', [App\Http\Controllers\PetController::class, 'index'])->name('dashboard');
+Route::get('/add', [App\Http\Controllers\PetController::class, 'create'])->name('add');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
