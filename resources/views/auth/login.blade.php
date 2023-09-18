@@ -6,7 +6,7 @@
 
         <input placeholder="Correo Electrónico" id="email" type="text" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
         @error('email')
-            <span class="invalid-feedback" role="alert">
+            <span class="error__form" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
@@ -15,11 +15,11 @@
 
         <input placeholder="Contraseña" id="password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
-        {{-- @error('password')
-            <span class="invalid-feedback" role="alert">
+        @error('password')
+            <span class="error__form" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
-        @enderror --}}
+        @enderror
     
     {{-- <input type="password" name="clave" placeholder="Contraseña"> --}}
 

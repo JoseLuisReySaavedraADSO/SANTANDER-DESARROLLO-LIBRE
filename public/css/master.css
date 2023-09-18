@@ -387,3 +387,23 @@ main.show div article p {
     color: #fff;
     text-decoration: none;
 }
+
+.error__form{
+    background-color: #d41616;
+    width: 90%;
+    opacity: .9;
+    border: 5px solid #b61515;
+    /* margin: 10px; */
+    border-radius: 7px;
+    position: absolute;
+    top: 380px;
+    left: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error__form strong{
+    width: 80%;
+    padding: 10px;
+}

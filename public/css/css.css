@@ -168,7 +168,10 @@ html {
     /* height: 40px; */
     /* display: inline-block; */
     padding: 7px;
+    font-size: 18px;
+    color: #000;
     border-radius: 30px;
+    text-decoration: none;
     background-color: #6aa5e3;
 }
 .category__animal:nth-child(2){
@@ -185,6 +188,7 @@ html {
     display: inline-block;
     font-size: 18px;
     font-weight: 300;
+    text-decoration: none;
 }
 .container__cards{
     width: 100%;
