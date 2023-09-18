@@ -172,10 +172,13 @@ html {
     color: #000;
     border-radius: 30px;
     text-decoration: none;
-    background-color: #6aa5e3;
-}
-.category__animal:nth-child(2){
     background-color: #f1f9fd;
+}
+/* .category__animal:nth-child(2){
+    background-color: #f1f9fd;
+} */
+.category__animal--select{
+    background-color: #6aa5e3;
 }
 .category__animal--image{
     background-color: #fff;

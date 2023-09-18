@@ -32,7 +32,7 @@
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_dog.svg')}}" alt="">
                 <p class="category__animal--text">Perros</p>
             </div>
-            <div class="category__animal">
+            <div class="category__animal category__animal--select">
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_cat.svg')}}" alt="">
                 <p class="category__animal--text">Gatos</p>
             </div>
