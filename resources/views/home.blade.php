@@ -10,8 +10,8 @@
             <h1>Buscar</h1>
             <div class="headerTitle__close">
                 <a class="dropdown-item" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
+                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
                     {{-- {{ __('Logout') }} --}}
                     <img src="{{asset('images-BackEnd/btn-close.svg')}}" alt="Close" title="Cerrar sesión">
                 </a>
@@ -39,17 +39,15 @@
         </div>
 
         <div class="container__cards">
-            @foreach ($pets as $pet)
+            @foreach ($dogs as $dog)
                 <div class="card__animal">
                     <div class="animal__photo">    
-                        {{-- {{dd(asset($pet->photo))}} --}}
-                        <img class="animal__photo--image" src="{{asset($pet->photo)}}" alt="">
+                        <img class="animal__photo--image" src="{{asset($dog->photo)}}" alt="">
                     </div>
                     <div class="animal__info">
-                        {{-- {{dd($pet)}} --}}
                         <div>
-                            <h2 class="animal__info--name">{{$pet->name}}</h2>
-                            <p class="animal__info--race">{{$pet->race->name}}</p> 
+                            <h2 class="animal__info--name">{{$dog->name}}</h2>
+                            <p class="animal__info--race">{{$dog->race->name}}</p> 
                         </div>
                         <div class="animal__info--extra">
                             <span>$400</span>

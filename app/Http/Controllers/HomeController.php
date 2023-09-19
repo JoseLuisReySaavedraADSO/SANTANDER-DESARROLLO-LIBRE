@@ -25,35 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $pets = Pet::paginate();
-        // $pets = Pet::with('race')->get();
-        // dd($pets);
-        // $petId = 1;
-        // $pet = Pet::with('name')->find($petId);
-        // dd($pet);
-        // $pet = Pet::with('race')->find($pets);
-        // dd($pet->race->name);
-        // foreach ($pets as $pet) {
-        
-            // echo $raceName, '<br>';
-        // }
-        return view('home', compact('pets'));
+        $dogs = Pet::where('categorie_id', 1)->get();
+        return view('home', compact('dogs'));
     }
 
     public function indexcats()
     {
-        $pets = Pet::paginate();
-        // $pets = Pet::with('race')->get();
-        // dd($pets);
-        // $petId = 1;
-        // $pet = Pet::with('name')->find($petId);
-        // dd($pet);
-        // $pet = Pet::with('race')->find($pets);
-        // dd($pet->race->name);
-        // foreach ($pets as $pet) {
-        
-            // echo $raceName, '<br>';
-        // }
+        $pets = Pet::where('categorie_id', 2)->get();
         return view('homecats', compact('pets'));
     }
 }
