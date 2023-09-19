@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePetRequest;
 use App\Models\Categorie;
 use App\Models\Gender;
 use App\Models\Race;
@@ -45,9 +46,18 @@ class PetController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StorePetRequest $data)
     {
-        //
+        dd('hola');
+        $data = [
+            'name' => $data['name'],
+            'race_id' => $data['raza'],
+            'category_id' => $data['categoria'],
+            'photo' => null,
+            'gender_id' => $data['genero'],
+        ];
+        $Pet = Pet::create($data);
+        return redirect()->route('dashboard');
     }
 
     /**
