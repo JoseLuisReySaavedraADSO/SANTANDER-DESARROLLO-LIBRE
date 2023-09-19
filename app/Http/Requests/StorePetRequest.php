@@ -21,12 +21,13 @@ class StorePetRequest extends FormRequest
      */
     public function rules(): array
     {
+        // dd($this->all());
         return [
             'name' => 'required | max:100',
-            'race_id' => 'required',
-            'category_id' => 'required',
-            'photo' => 'required | max:100',
-            'gender_id' => 'required',
+            'raza' => 'max:100',
+            'categoria' => 'max:100',
+            'photo' => 'max:100',
+            'genero' => 'max:100',
         ];
     }
 }

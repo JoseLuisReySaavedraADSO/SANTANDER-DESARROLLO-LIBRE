@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\PetController::class, 'index'])->name('dashboard');
 Route::get('/add', [App\Http\Controllers\PetController::class, 'create'])->name('add');
-Route::post('/create', [App\Http\Controllers\PetController::class, 'store'])->name('create');
+Route::post('/store', [App\Http\Controllers\PetController::class, 'store'])->name('store');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/homecats', [App\Http\Controllers\HomeController::class, 'indexcats'])->name('homecats');

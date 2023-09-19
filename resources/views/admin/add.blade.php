@@ -9,8 +9,9 @@
         <figure class="photo-preview">
             <img src="imgs/photo-lg-0.svg" alt="">
         </figure>
-        <form method="POST" action="{{ route('create') }}">
+        <form method="POST" action="{{ route('store') }}">
 
+            @csrf
             <input type="text" name="name" placeholder="Nombre">
             <div class="select">
 
@@ -29,8 +30,7 @@
                     @endforeach
                 </select>
             </div>
-            @csrf
-            <button type="button" class="upload">Subir Foto</button>
+            {{-- <button type="button" class="upload">Subir Foto</button> --}}
             <div class="select">
                 <select name="genero">
                     <option disabled selected>Seleccionar genero...</option>

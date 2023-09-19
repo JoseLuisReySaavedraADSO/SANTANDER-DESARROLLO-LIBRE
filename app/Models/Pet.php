@@ -12,7 +12,7 @@ class Pet extends Model
         'id',
         'name',
         'race_id',
-        'category_id',
+        'categorie_id',
         'photo',
         'gender_id',
     ];

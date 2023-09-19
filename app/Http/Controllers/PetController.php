@@ -36,7 +36,7 @@ class PetController extends Controller
      */
     public function create()
     {
-        $races = Race::all(); // Obtén todos los registros necesarios!!
+        $races = Race::all(); 
         $genders = Gender::all();
         $categories = Categorie::all();
         // dd($genders);
@@ -48,14 +48,15 @@ class PetController extends Controller
      */
     public function store(StorePetRequest $data)
     {
-        dd('hola');
+        // dd($data['name']);
         $data = [
             'name' => $data['name'],
             'race_id' => $data['raza'],
-            'category_id' => $data['categoria'],
-            'photo' => null,
+            'categorie_id' => $data['categoria'],
+            'photo' => 'images-frontEnd/ivana.png',
             'gender_id' => $data['genero'],
         ];
+        // dd($Pet = Pet::create($data));
         $Pet = Pet::create($data);
         return redirect()->route('dashboard');
     }

@@ -36,11 +36,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Categorie::create([
-            'name' => 'Gato',
+            'name' => 'Perro',
         ]);
 
         Categorie::create([
-            'name' => 'Perro',
+            'name' => 'Gato',
         ]);
 
         User::factory(16)->create();
