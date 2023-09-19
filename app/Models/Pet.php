@@ -27,11 +27,11 @@ class Pet extends Model
 
     public function Categorie()
     {
-        return $this->hasOne(Categorie::class);
+        return $this->belongsTo(Categorie::class, 'categorie_id', 'id');
     }
 
     public function Gender()
     {
-        return $this->hasOne(Gender::class);
+        return $this->belongsTo(Gender::class, 'gender_id', 'id');
     }
 }

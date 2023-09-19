@@ -16,18 +16,7 @@ class PetController extends Controller
      */
     public function index()
     {
-        $pets = Pet::paginate();
-        // $pets = Pet::with('race')->get();
-        // dd($pets);
-        // $petId = 1;
-        // $pet = Pet::with('name')->find($petId);
-        // dd($pet);
-        // $pet = Pet::with('race')->find($pets);
-        // dd($pet->race->name);
-        // foreach ($pets as $pet) {
-        
-            // echo $raceName, '<br>';
-        // }
+        $pets = Pet::all();
         return view('admin/dashboard', compact('pets'));
     }
 
@@ -36,7 +25,7 @@ class PetController extends Controller
      */
     public function create()
     {
-        $races = Race::all(); 
+        $races = Race::all();
         $genders = Gender::all();
         $categories = Categorie::all();
         // dd($genders);
@@ -64,8 +53,12 @@ class PetController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
+        $pet = Pet::findOrFail($id);
+
+        // Pasar la mascota a la vista "show"
+        return view('admin/show', compact('pet'));
     }
 
     /**

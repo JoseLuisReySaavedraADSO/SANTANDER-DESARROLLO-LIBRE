@@ -21,7 +21,7 @@
                     <h4>{{$pet->race->name}}</h4>
                 </div>
                 <div class="controls">
-                    <a href="show.html" class="show"></a>
+                    <a href="{{ route('show', $pet->id) }}" class="show"></a>
                     <a href="edit.html" class="edit"></a>
                     <a href="#" class="delete"></a>
                 </div>
