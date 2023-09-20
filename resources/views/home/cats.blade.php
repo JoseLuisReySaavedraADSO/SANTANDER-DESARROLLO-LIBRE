@@ -10,7 +10,7 @@
             <h1>Buscar</h1>
             <div class="headerTitle__close">
                 <a class="dropdown-item" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
+                    onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                     {{-- {{ __('Logout') }} --}}
                     <img src="{{asset('images-BackEnd/btn-close.svg')}}" alt="Close" title="Cerrar sesión">
