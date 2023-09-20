@@ -2,43 +2,51 @@
 @section('content')
     <main class="add">
         <header>
-            <h2>Adicionar Mascota</h2>
+            <h2>Editar Mascota</h2>
             <a href="{{ route('dashboard') }}" class="back"></a>
             <a href="{{ route('dogs') }}" class="close"></a>
         </header>
         <figure class="photo-preview">
             <img src="/imgs/photo-lg-0.svg" alt="">
         </figure>
-        <form method="POST" action="{{ route('store') }}">
-
+        <form method="POST" action="{{ route('update', $pet->id) }}">
             @csrf
-            <input type="text" name="name" placeholder="Nombre">
-            <div class="select">
 
+            <input type="text" name="name" placeholder="Nombre" value="{{ $pet->name }}">
+
+            <div class="select">
                 <select name="raza">
-                    <option disabled selected>Seleccionar raza...</option>
+                    <option disabled>Seleccionar raza...</option>
                     @foreach ($races as $race)
-                        <option value="{{ $race->id }}">{{ $race->name }}</option>
+                        <option value="{{ $race->id }}" {{ $race->id == $pet->race_id ? 'selected' : '' }}>
+                            {{ $race->name }}
+                        </option>
                     @endforeach
                 </select>
             </div>
+
             <div class="select">
                 <select name="categoria">
-                    <option disabled selected>Seleccionar categoria...</option>
+                    <option disabled>Seleccionar categoria...</option>
                     @foreach ($categories as $categorie)
-                        <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
+                        <option value="{{ $categorie->id }}" {{ $categorie->id == $pet->categorie_id ? 'selected' : '' }}>
+                            {{ $categorie->name }}
+                        </option>
                     @endforeach
                 </select>
             </div>
-            {{-- <button type="button" class="upload">Subir Foto</button> --}}
+
             <div class="select">
                 <select name="genero">
-                    <option disabled selected>Seleccionar genero...</option>
+                    <option disabled>Seleccionar genero...</option>
                     @foreach ($genders as $gender)
-                        <option value="{{ $gender->id }}">{{ $gender->name }}</option>
+                        <option value="{{ $gender->id }}" {{ $gender->id == $pet->gender_id ? 'selected' : '' }}>
+                            {{ $gender->name }}
+                        </option>
                     @endforeach
                 </select>
             </div>
+
             <button type="submit" class="save">Guardar</button>
         </form>
     </main>
