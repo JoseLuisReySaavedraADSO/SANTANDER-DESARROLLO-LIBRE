@@ -2,10 +2,6 @@
 
 @section('content')
 
-@if(auth()->user()->rol_id === 1)
-    <a href="{{ route('dashboard') }}" class="btn btn-primary">Dashboard</a>
-@endif
-
 <main class="main__container">
 
     <section class="container second__container">

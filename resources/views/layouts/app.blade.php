@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('css/css.css')}}">
-    <link rel="stylesheet" href="{{asset('css/master.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/css.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/master.css') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -21,7 +22,11 @@
     <!-- Scripts -->
     @vite(['resources/js/app.js', 'resources/js/search.js'])
 </head>
+
 <body>
+    @if (auth()->user()->rol_id === 1)
+        <a href="{{ route('dashboard') }}" class="btn btn-primary">Dashboard</a>
+    @endif
     <div id="app">
 
         @yield('content')
@@ -29,4 +34,5 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
+
 </html>
