@@ -1,10 +1,10 @@
-@extends('layouts.back')
+@extends('layouts.app')
 @section('content')
     <main class="show">
         <header>
             <h2>Consultar Mascota</h2>
             <a href="{{ route('dashboard') }}" class="back"></a>
-            <a href="{{ route('home') }}" class="close"></a>
+            <a href="{{ route('dogs') }}" class="close"></a>
         </header>
         <figure class="photo-preview">
             <img src="{{asset($pet->photo)}}" alt="">

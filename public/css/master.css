@@ -372,11 +372,11 @@ main.show div article p {
     font-size: 11.5px;
 }
 
-.form__inputContainer{
+.form__inputContainer--login{
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 740px;
+    top: 750px;
 }
 
 .form__inputContainer--text{

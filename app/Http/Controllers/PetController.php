@@ -17,6 +17,8 @@ class PetController extends Controller
     public function index()
     {
         $pets = Pet::all();
+
+        // VIEW ADMIN DASHBOARD
         return view('admin/dashboard', compact('pets'));
     }
 
@@ -29,6 +31,8 @@ class PetController extends Controller
         $genders = Gender::all();
         $categories = Categorie::all();
         // dd($genders);
+
+        // VIEW ADMIN ADD
         return view('admin/add', compact('races', 'genders', 'categories'));
     }
 
@@ -58,6 +62,7 @@ class PetController extends Controller
         $pet = Pet::findOrFail($id);
 
         // Pasar la mascota a la vista "show"
+        // VIEW ADMIN SHOW
         return view('admin/show', compact('pet'));
     }
 

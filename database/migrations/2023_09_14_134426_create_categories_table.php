@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // TABLA CATEGORIA DE MASCOTAS
         Schema::create('categories', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');

@@ -33,11 +33,11 @@
         </div>
 
         <div class="category">
-            <a href="{{ route('home') }}" class="category__animal category__animal--select">
+            <a href="{{ route('dogs') }}" class="category__animal category__animal--select">
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_dog.svg')}}" alt="">
                 <p class="category__animal--text">Perros</p>
             </a>
-            <a href="{{ route('homecats') }}" class="category__animal">
+            <a href="{{ route('cats') }}" class="category__animal">
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_cat.svg')}}" alt="">
                 <p class="category__animal--text">Gatos</p>
             </a>

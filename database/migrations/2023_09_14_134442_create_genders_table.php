@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // TABLA GENERO DE MASCOTAS
         Schema::create('genders', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');

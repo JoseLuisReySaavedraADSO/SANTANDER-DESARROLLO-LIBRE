@@ -13,6 +13,7 @@ class categorie extends Model
         'name',
     ];
 
+    // RELACION UNO A MUCHOS CON RAZA
     public function Race()
     {
         return $this->hasMany(Race::class);

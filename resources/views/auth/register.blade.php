@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="login__container">
+<main class="register__container">
     
-    <section class="login">
+    <section class="register">
 
         <div class="title">
             <h1 class="title__main">Tu mejor amigo <span class="title__second">en casa!</span></h1>

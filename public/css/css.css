@@ -274,12 +274,12 @@ html {
 
 
 /* SECCIÓN DE LOGIN */
-.login__container{
+.register__container{
     width: 100%;
     background: rgb(189,235,247);
     background: linear-gradient(180deg, rgba(189,235,247,1) 0%, rgba(119,175,249,1) 100%);
 }
-.login{
+.register{
     min-height: 100vh;
     display: flex;
     justify-content: flex-end;

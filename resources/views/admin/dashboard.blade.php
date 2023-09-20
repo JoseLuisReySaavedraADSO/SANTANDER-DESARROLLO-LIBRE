@@ -1,9 +1,9 @@
-@extends('layouts.back')
+@extends('layouts.app')
 @section('content')
 <main class="dashboard">
     <header>
         <h2>Administrar Mascotas</h2>
-        <a href="{{ route('home') }}" class="close"></a>
+        <a href="{{ route('dogs') }}" class="close"></a>
     </header>
         <a href="{{ route('add') }}" class="add"></a>
     <table>

@@ -17,6 +17,7 @@ class RaceFactory extends Factory
     public function definition(): array
     {
         return [
+            // NOMBRE DE LA RAZA
             'name' => fake()->name(),
         ];
     }

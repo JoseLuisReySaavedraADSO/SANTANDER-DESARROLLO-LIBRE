@@ -1,4 +1,4 @@
-@extends('layouts.back')
+@extends('layouts.app')
 
 @section('content')
 <main class="login">
@@ -20,22 +20,14 @@
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
-    
-    {{-- <input type="password" name="clave" placeholder="Contraseña"> --}}
 
-    
         <button type="submit" class="btn btn-primary">
         {{ __('Login') }}
         </button>
 
-        <div class="form__inputContainer">
+        <div class="form__inputContainer--login">
             <p class="form__inputContainer--text">¿Aún no posee una cuenta? <a class="form__inputContainer--link" href="{{route('register')}}">Regístrate</a> </p>
         </div>
-        
-        
-        {{-- <button type="submit">Ingresar</button>
-    
-        <p class="form__inputContainer--text">¿Aún no posee una cuenta? <a class="form__inputContainer--link" href="{{ route('register') }}">Regístrate</a> </p> --}}
 
     </form>
 </main>
