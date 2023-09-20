@@ -53,7 +53,7 @@
           <p>{{$pet->name}}</p>
           <span>{{$pet->race->name}}</span>
         </div>
-        <p>$200</p>
+        {{-- <p>$200</p> --}}
       </div>
 
       {{-- DETALLES ADOPTADOR --}}

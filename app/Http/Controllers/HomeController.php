@@ -45,4 +45,9 @@ class HomeController extends Controller
         $pet = Pet::findOrFail($id);
         return view('home.details.detailsView', compact('pet'));
     }
+
+    public function error()
+    {
+        return view('error');
+    }
 }

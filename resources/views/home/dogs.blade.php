@@ -60,7 +60,7 @@
                             <p class="animal__info--race">{{$dog->race->name}}</p> 
                         </div>
                         <div class="animal__info--extra">
-                            <span>$400</span>
+                            {{-- <span>$400</span> --}}
                             <img src="{{asset('images-frontEnd/sm-heart.svg')}}" alt="">
                         </div>
                     </div>

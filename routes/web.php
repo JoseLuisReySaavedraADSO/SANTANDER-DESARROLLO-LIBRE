@@ -44,6 +44,9 @@ Route::post('/update/{id}', [App\Http\Controllers\PetController::class, 'update'
 Route::get('/dogs', [App\Http\Controllers\HomeController::class, 'indexdogs'])->name('dogs');
 // RUTA GATOS
 Route::get('/cats', [App\Http\Controllers\HomeController::class, 'indexcats'])->name('cats');
+ 
+//RUTA PARA ERRORES
+Route::get('/error', [App\Http\Controllers\HomeController::class, 'error'])->name('error');
 
 // RUTA DETALLE MASCOTA
 Route::get('/pets/details/{id}', [App\Http\Controllers\HomeController::class, 'indexdetails'])->name('details');

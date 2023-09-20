@@ -16,6 +16,10 @@ class PetController extends Controller
      */
     public function index()
     {
+        if (auth()->user()->rol_id != 1) {
+            return redirect()->route('error');
+        }
+
         $pets = Pet::all();
 
         // VIEW ADMIN DASHBOARD
@@ -59,6 +63,10 @@ class PetController extends Controller
      */
     public function show($id)
     {
+        if (auth()->user()->rol_id != 1) {
+            return redirect()->route('dogs');
+        }
+
         $pet = Pet::findOrFail($id);
 
         // Pasar la mascota a la vista "show"
@@ -69,7 +77,7 @@ class PetController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         // Buscar la mascota por su ID
         $pet = Pet::findOrFail($id);
