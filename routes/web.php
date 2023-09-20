@@ -25,15 +25,18 @@ Auth::routes();
 
 // RUTA CONTROL MASCOTAS
 Route::get('/dashboard', [App\Http\Controllers\PetController::class, 'index'])->name('dashboard');
-// RUTA AÑADIR MASCOTAS
+// RUTA VISTA AÑADIR MASCOTAS
 Route::get('/add', [App\Http\Controllers\PetController::class, 'create'])->name('add');
-// RUTA SIN DEFINIR
+// RUTA AÑADIR MASCOTAS
 Route::post('/store', [App\Http\Controllers\PetController::class, 'store'])->name('store');
-// RUTA SIN DEFINIR
+// RUTA VER MASCOTAS
 Route::get('/show/{id}', [App\Http\Controllers\PetController::class, 'show'])->name('show');
+// RUTA ELIMINAR MASCOTAS
 Route::delete('/delete/{id}', [App\Http\Controllers\PetController::class, 'destroy'])->name('delete');
-
-
+// RUTA VISTA EDITAR MASCOTAS
+Route::get('/edit/{id}', [App\Http\Controllers\PetController::class, 'edit'])->name('edit');
+// RUTA EDITAR MASCOTAS
+Route::post('/update/{id}', [App\Http\Controllers\PetController::class, 'update'])->name('update');
 
 // RUTAS ANIMALES
 

@@ -27,7 +27,7 @@
                         </div>
                         <div class="controls">
                             <a href="{{ route('show', $pet->id) }}" class="show"></a>
-                            <a href="edit.html" class="edit"></a>
+                            <a href="{{ route('edit', $pet->id) }}" class="edit"></a>
 
                             <a href="#" class="delete"
                                 onclick="event.preventDefault(); document.getElementById('delete-form-{{ $pet->id }}').submit();"></a>
