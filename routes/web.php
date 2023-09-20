@@ -45,5 +45,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'indexdogs'])->
 // RUTA GATOS
 Route::get('/home2', [App\Http\Controllers\HomeController::class, 'indexcats'])->name('cats');
 
-// RUTA DETALLE MASCOTA
+// RUTA DETALLES MASCOTA
 Route::get('/home/details', [App\Http\Controllers\HomeController::class, 'indexdetails'])->name('details');

@@ -43,11 +43,11 @@
             @foreach ($pets as $pet)
                 <div class="card__animal">
                     <div class="animal__photo">    
-                        {{-- {{dd(asset($pet->photo))}} --}}
-                        <img class="animal__photo--image" src="{{asset($pet->photo)}}" alt="">
+                        <a href="{{ route('details') }}">
+                            <img class="animal__photo--image" src="{{asset($pet->photo)}}" alt="">
+                        </a>
                     </div>
                     <div class="animal__info">
-                        {{-- {{dd($pet)}} --}}
                         <h2 class="animal__info--name">{{$pet->name}}</h2>
                         <p class="animal__info--race">{{$pet->race->name}}</p>
                         <div class="animal__info--extra">
