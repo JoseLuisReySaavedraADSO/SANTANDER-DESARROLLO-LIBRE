@@ -47,7 +47,9 @@
             @foreach ($dogs as $dog)
                 <div class="card__animal">
                     <div class="animal__photo">    
-                        <img class="animal__photo--image" src="{{asset($dog->photo)}}" alt="">
+                        <a href="{{ route('details') }}">
+                            <img class="animal__photo--image" src="{{asset($dog->photo)}}" alt="">
+                        </a>
                     </div>
                     <div class="animal__info">
                         <div>

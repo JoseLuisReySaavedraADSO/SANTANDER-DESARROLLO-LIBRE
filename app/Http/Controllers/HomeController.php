@@ -39,4 +39,9 @@ class HomeController extends Controller
         // VIEW HOME CATS
         return view('home.cats', compact('pets'));
     }
+
+    public function indexdetails()
+    {
+        return view('home.details.detailsView');
+    }
 }
