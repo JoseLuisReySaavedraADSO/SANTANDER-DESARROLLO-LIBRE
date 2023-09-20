@@ -23,15 +23,20 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+
+    public function indexdogs()
     {
         $dogs = Pet::where('categorie_id', 1)->get();
-        return view('home', compact('dogs'));
+
+        // VIEW HOME DOGS
+        return view('home.dogs', compact('dogs'));
     }
 
     public function indexcats()
     {
         $pets = Pet::where('categorie_id', 2)->get();
-        return view('homecats', compact('pets'));
+
+        // VIEW HOME CATS
+        return view('home.cats', compact('pets'));
     }
 }

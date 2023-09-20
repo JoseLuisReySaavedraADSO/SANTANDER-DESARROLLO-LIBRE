@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // TABLA RAZA DE MASCOTAS
         Schema::create('races', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');

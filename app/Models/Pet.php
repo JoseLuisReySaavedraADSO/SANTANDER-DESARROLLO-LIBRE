@@ -17,19 +17,19 @@ class Pet extends Model
         'gender_id',
     ];
 
-    /**
-     * Relaciones uno a uno
-     */
+    // RELACION DE MASCOTA CON RAZA
     public function race()
     {
         return $this->belongsTo(Race::class, 'race_id', 'id');
     }
-
+    
+    // RELACION DE MASCOTA CON CATEGORIA
     public function Categorie()
     {
         return $this->belongsTo(Categorie::class, 'categorie_id', 'id');
     }
 
+    // RELACION DE MASCOTA CON GENERO
     public function Gender()
     {
         return $this->belongsTo(Gender::class, 'gender_id', 'id');

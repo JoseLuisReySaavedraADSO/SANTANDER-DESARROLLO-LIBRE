@@ -13,6 +13,7 @@ class Race extends Model
         'name',
     ];
 
+    // RELACION UNO A MUCHOS CON MASCOTA
     public function pet()
     {
         return $this->hasMany(Pet::class);

@@ -11,7 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{asset('css/css.css')}}">
-    <!-- <link rel="stylesheet" href="{{asset('css/master.css')}}"> -->
+    <link rel="stylesheet" href="{{asset('css/master.css')}}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">

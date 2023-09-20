@@ -22,6 +22,8 @@ class StorePetRequest extends FormRequest
     public function rules(): array
     {
         // dd($this->all());
+
+        // DATOS REQUERIDOS
         return [
             'name' => 'required | max:100',
             'raza' => 'max:100',

@@ -20,12 +20,24 @@ Route::get('/', function () {
 
 Auth::routes(); 
 
+
+// RUTAS ADMINISTRADOR
+
+// RUTA CONTROL MASCOTAS
 Route::get('/dashboard', [App\Http\Controllers\PetController::class, 'index'])->name('dashboard');
+// RUTA AÑADIR MASCOTAS
 Route::get('/add', [App\Http\Controllers\PetController::class, 'create'])->name('add');
+// RUTA SIN DEFINIR
 Route::post('/store', [App\Http\Controllers\PetController::class, 'store'])->name('store');
+// RUTA SIN DEFINIR
 Route::get('/show/{id}', [App\Http\Controllers\PetController::class, 'show'])->name('show');
 Route::delete('/delete/{id}', [App\Http\Controllers\PetController::class, 'destroy'])->name('delete');
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/homecats', [App\Http\Controllers\HomeController::class, 'indexcats'])->name('homecats');
+
+// RUTAS ANIMALES
+
+// RUTA PERROS
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'indexdogs'])->name('dogs');
+// RUTA GATOS
+Route::get('/home2', [App\Http\Controllers\HomeController::class, 'indexcats'])->name('cats');

@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // TABLA ROLES DE USUARIO
         Schema::create('rols', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');

@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // TABLAS MASCOTAS
         Schema::create('pets', function (Blueprint $table) {
             $table->id()->autoIncrement();
 
