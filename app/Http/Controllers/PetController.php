@@ -47,7 +47,7 @@ class PetController extends Controller
         ];
         // dd($Pet = Pet::create($data));
         $Pet = Pet::create($data);
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard')->with('success', 'Mascota agregada exitosamente');
     }
 
     /**
@@ -80,8 +80,15 @@ class PetController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        // Buscar la mascota por su ID
+        $pet = Pet::findOrFail($id);
+
+        // Eliminar la mascota
+        $pet->delete();
+
+        return redirect()->route('dashboard')->with('success', 'Mascota eliminada exitosamente');
+        
     }
 }

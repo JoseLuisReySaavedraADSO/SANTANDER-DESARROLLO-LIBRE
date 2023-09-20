@@ -24,6 +24,8 @@ Route::get('/dashboard', [App\Http\Controllers\PetController::class, 'index'])->
 Route::get('/add', [App\Http\Controllers\PetController::class, 'create'])->name('add');
 Route::post('/store', [App\Http\Controllers\PetController::class, 'store'])->name('store');
 Route::get('/show/{id}', [App\Http\Controllers\PetController::class, 'show'])->name('show');
+Route::delete('/delete/{id}', [App\Http\Controllers\PetController::class, 'destroy'])->name('delete');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/homecats', [App\Http\Controllers\HomeController::class, 'indexcats'])->name('homecats');
