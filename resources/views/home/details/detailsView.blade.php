@@ -18,7 +18,7 @@
 
       {{-- FOTO MASCOTA --}}
       <div class="superior__image">
-        <img class="superior__image--img" src="{{ asset('images-frontEnd/karsten-big.png') }}" alt="Foto de la mascota">
+        <img class="superior__image--img" src="{{ asset($pet->photo) }}" alt="Foto de la mascota">
       </div>
 
       {{-- DESCRIPCIÓN --}}
@@ -32,12 +32,12 @@
           <span>5-6</span>
         </div>
         <div class="descripcion__desc">
-          <p>Color</p>
-          <span>Crema</span>
+          <p>Categoria</p>
+          <span>{{$pet->categorie->name}}</span>
         </div>
         <div class="descripcion__desc">
           <p>Genero</p>
-          <span>Macho</span>
+          <span>{{$pet->gender->name}}</span>
         </div>
       </div>
 
@@ -50,8 +50,8 @@
       {{-- DETALLES MASCOTA --}}
       <div class="inferior__detallesMascota">
         <div>
-          <p>Karsten</p>
-          <span>Bulldog</span>
+          <p>{{$pet->name}}</p>
+          <span>{{$pet->race->name}}</span>
         </div>
         <p>$200</p>
       </div>

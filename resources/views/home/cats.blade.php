@@ -37,17 +37,24 @@
                 <img class="category__animal--image" src="{{asset('images-frontEnd/fa-solid_cat.svg')}}" alt="">
                 <p class="category__animal--text">Gatos</p>
             </a>
+
+            @if(auth()->user()->rol_id === 1)
+                <a href="{{ route('dashboard') }}">
+                    <img src="{{ asset('images-BackEnd/btn-edit.svg') }}" alt="Dashboard" title="Dashboard">
+                </a>
+            @endif
+            
         </div>
 
         <div class="container__cards">
             @foreach ($pets as $pet)
                 <div class="card__animal">
                     <div class="animal__photo">    
-                        {{-- {{dd(asset($pet->photo))}} --}}
-                        <img class="animal__photo--image" src="{{asset($pet->photo)}}" alt="">
+                        <a href="{{ route('details', $pet->id) }}">
+                            <img class="animal__photo--image" src="{{asset($pet->photo)}}" alt="">
+                        </a>
                     </div>
                     <div class="animal__info">
-                        {{-- {{dd($pet)}} --}}
                         <h2 class="animal__info--name">{{$pet->name}}</h2>
                         <p class="animal__info--race">{{$pet->race->name}}</p>
                         <div class="animal__info--extra">

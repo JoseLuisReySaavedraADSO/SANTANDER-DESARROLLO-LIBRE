@@ -24,9 +24,6 @@
 </head>
 
 <body>
-    @if (auth()->user()->rol_id === 1)
-        <a href="{{ route('dashboard') }}" class="btn btn-primary">Dashboard</a>
-    @endif
     <div id="app">
 
         @yield('content')

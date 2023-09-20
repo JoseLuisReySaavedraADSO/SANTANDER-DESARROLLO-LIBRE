@@ -40,8 +40,9 @@ class HomeController extends Controller
         return view('home.cats', compact('pets'));
     }
 
-    public function indexdetails()
+    public function indexdetails($id)
     {
-        return view('home.details.detailsView');
+        $pet = Pet::findOrFail($id);
+        return view('home.details.detailsView', compact('pet'));
     }
 }
